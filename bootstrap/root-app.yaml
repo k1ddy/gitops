@@ -8,9 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/k1ddy/gitops.git'
     targetRevision: main
-    path: apps
-    directory:
-      recurse: true
+    path: apps/ai-demo
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
