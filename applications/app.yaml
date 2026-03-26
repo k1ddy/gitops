@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: 'https://github.com/k1ddy/gitops.git'
     targetRevision: main
-    path: apps/ai-demo/base
+    path: workloads/ai-demo/base
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: ai-demo
