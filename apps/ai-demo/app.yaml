@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ai-demo-bootstrap
+  namespace: argocd
+spec:
+  project: ai-demo
+  source:
+    repoURL: 'https://github.com/k1ddy/gitops.git'
+    targetRevision: main
+    path: apps/ai-demo/base
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: ai-demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
