@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: hello-web
   namespace: ai-demo
+  
 spec:
   ingressClassName: webapprouting.kubernetes.azure.com
   rules:
